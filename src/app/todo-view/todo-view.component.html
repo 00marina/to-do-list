@@ -1,1 +1,42 @@
-<p>todo-view works!</p>
+<script
+  src="https://kit.fontawesome.com/1f7b6fc75b.js"
+  crossorigin="anonymous"
+></script>
+<div class="heading">
+  <h1>HOME</h1>
+</div>
+<div class="home-box">
+  <button id="add-new-todo"></button>
+  <div class="todo-view-box">
+    <div class="all-todo">
+      <div>
+        <div class="allt-heading">
+          <h2>All tasks</h2>
+        </div>
+        
+        <div class="scroll">
+            <div *ngFor="let area of allTasksArray" class="area-item">
+                <div>
+                  <div class="task-inner">
+                    <div class="ti-left">
+                      <h4 class="task-name">{{ area.name }}</h4>
+                      <p><fa-icon [icon]="faTag"></fa-icon> {{ area.category }}</p>
+                    </div>
+      
+                    <div>
+                      <div class="task-buttons">
+                        <button class="task-edit-btn"><fa-icon [icon]="faPenToSquare"></fa-icon></button>
+                        <button class="task-delete-btn"><fa-icon [icon]="faTrash"></fa-icon></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="category-box"></div>
+    <div class="fioished-box"></div>
+  </div>
+</div>

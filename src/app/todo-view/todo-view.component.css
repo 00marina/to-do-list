@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* HOME */
+.heading {
+    height: 5vw;
+    background-color: #0077B6;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1vw;
+    font-family: "Poppins", sans-serif;
+}
+
+/*under heading container for all*/
+.home-box {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* all tasks box */
+.todo-view-box {
+    padding: 1vw;
+    margin-top: 1vw;
+}
+
+/* all to do cards container */
+.all-todo {
+    border: 1px solid #0077B6;
+    border-radius: 10px;
+    width: 40vw;
+    background-color: #CAF0F8;
+    height: 34vw;
+}
+
+.scroll {
+    overflow: scroll;
+    height: 27.5vw;
+}
+
+
+/* tasks heading -  All tasks*/
+.allt-heading {
+    background-color: #0077B6;
+    border-radius: 10px 10px 0 0;
+    padding: 1vw 0;
+    margin-bottom: 1vw;
+    color: aliceblue;
+    padding-left: 1vw;
+}
+
+/* ngFor generated content holder*/
+.area-item {
+    background-color: #0096C7;
+    margin: 0.5vw 1vw;
+    padding: 0.8vw;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.task-name {
+    height: 2vw;
+    transition: 0.3s ease;
+}
+
+.task-name:hover {
+    font-size: 1.4vw;
+    cursor: grab;
+}
+
+/* task text and button organize*/
+.task-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ti-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* edit and delete button container*/
+.task-buttons {
+    padding-left: 1vw;
+    display: flex;
+    gap: 1vw;
+}
+
+button {
+    width: 2vw;
+    height: 2vw;
+    font-size: 1vw;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    width: 2.2vw;
+    height: 2.2vw;
+    font-size: 1.2vw;
+    cursor: grab;
+}
+
+.task-edit-btn {
+    color: #0096C7;
+}
+
+.task-delete-btn {
+    color: #ba1a1a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* other styles */
+h2, h3, h4, p {
+    display: block;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+    
+}
+
+h1 {
+ font-size: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+
+}
+
+h4 {
+    font-size: 1.3vw;
+}
+
+h5 {
+
+}
+
+p,
+fa-icon {
+    font-size: 1vw;
+}
+
+::-webkit-scrollbar {
+    width: 5px; 
+    height: 10px; 
+  }
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #0077B6; /* color of the scrollbar thumb */
+    border-radius: 6px; /* roundness of the thumb */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* color of the scrollbar track */
+  }
+  
+  /* Corner */
+  ::-webkit-scrollbar-corner {
+    background-color: transparent; /* color of the scrollbar corner */
+  }
