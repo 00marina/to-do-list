@@ -10,6 +10,10 @@ import { EditTodoComponent } from './edit-todo/edit-todo.component';
 import { CategoryViewComponent } from './category-view/category-view.component';
 import { CategoryNewComponent } from './category-new/category-new.component';
 import { CategoryEditComponent } from './category-edit/category-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,12 @@ import { CategoryEditComponent } from './category-edit/category-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

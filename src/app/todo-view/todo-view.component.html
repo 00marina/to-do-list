@@ -6,37 +6,79 @@
   <h1>HOME</h1>
 </div>
 <div class="home-box">
-  <button id="add-new-todo"></button>
+  <div class="new-btn-box">
+    <button id="add-new-todo" routerLink="/new" >New Task</button>
+  </div>
+  
   <div class="todo-view-box">
     <div class="all-todo">
       <div>
         <div class="allt-heading">
           <h2>All tasks</h2>
         </div>
-        
+
         <div class="scroll">
-            <div *ngFor="let area of allTasksArray" class="area-item">
+          <div *ngFor="let area of allTasksArray" >
+            <div *ngIf="area.done !== true" class="area-item">
+              <div class="task-inner" >
+                <div class="ti-left" >
+                  <h4 class="task-name" (click)="finishTask(area.id)" >{{ area.name }}</h4>
+                  <p><fa-icon [icon]="faTag"></fa-icon> {{ area.category }}</p>
+                </div>
+
                 <div>
-                  <div class="task-inner">
-                    <div class="ti-left">
-                      <h4 class="task-name">{{ area.name }}</h4>
-                      <p><fa-icon [icon]="faTag"></fa-icon> {{ area.category }}</p>
-                    </div>
-      
-                    <div>
-                      <div class="task-buttons">
-                        <button class="task-edit-btn"><fa-icon [icon]="faPenToSquare"></fa-icon></button>
-                        <button class="task-delete-btn"><fa-icon [icon]="faTrash"></fa-icon></button>
-                      </div>
-                    </div>
+                  <div class="task-buttons">
+                    <button class="task-edit-btn" routerLink="/task/{{area.id}}">
+                      <fa-icon [icon]="faPenToSquare"></fa-icon>
+                    </button>
+                    <button class="task-delete-btn" (click)="deleteTask(area.id)">
+                      <fa-icon [icon]="faTrash"></fa-icon>
+                    </button>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
-        
       </div>
     </div>
-    <div class="category-box"></div>
-    <div class="fioished-box"></div>
+    <!-- category display -->
+    <div class="category-box">
+      <div class="cat-heading">
+        <h2>All categories</h2>
+      </div>
+      <div class="cat-card-box">
+        <span class="new-category">
+          <span><fa-icon [icon]="faPlus"></fa-icon></span>
+        </span>
+        <span *ngFor="let item of categoriesArray" class="category-card">
+          <span>{{ item }}</span>
+        </span>
+      </div>
+    </div>
+    <div class="finished-tasks-disp">
+      <div class="fin-heading">
+        <h2>Finished tasks</h2>
+      </div>
+      <div class="fin-tasks-box">
+        <div *ngFor="let item of allTasksArray" class="fin-cards">
+          <div *ngIf="item.done === true">
+            <div class="del-item">
+              <div>
+                <p class="del-name" (click)="undoFinish(item.id)">{{ item.name }}</p>
+                <p class="del-desc">{{ item.desc }}</p>
+                <p class="del-category"><fa-icon [icon]="faTag"></fa-icon> {{ item.category }}</p>
+              </div>
+
+              <div>
+                <button class="delete-fin-taks" (click)="deleteTask(item.id)">
+                  <fa-icon [icon]="faTrash"></fa-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Area } from './area';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -39,21 +40,21 @@ export class TodoServiceService {
       name: 'Go for a run',
       desc: '5 miles at the park',
       category: 'Health',
-      done: false
+      done: true
     },
     {
       id: 6,
       name: 'Read book',
       desc: 'Chapter 7 to 10',
       category: 'Personal',
-      done: false
+      done: true
     },
     {
       id: 7,
       name: 'Attend team meeting',
       desc: 'Discuss project updates',
       category: 'Work',
-      done: false
+      done: true
     },
     {
       id: 8,
@@ -77,8 +78,15 @@ export class TodoServiceService {
       done: false
     }
   ];
-
   
 
-  constructor() { }
+
+  constructor() {
+    console.log("to do service initialized!");
+   }
+
+  getDemoArray(): Observable<Area[]> {
+    console.log("demo array: ", this.demoArray);
+    return of(this.demoArray);
+  }
 }

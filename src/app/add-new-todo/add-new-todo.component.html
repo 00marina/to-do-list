@@ -1,1 +1,38 @@
-<p>add-new-todo works!</p>
+<div *ngIf="!populated">
+  <p>LOADING</p>
+</div>
+<div *ngIf="populated">
+  <div class="new-todo-box">
+    <div class="todo-card">
+      <div class="new-todo-heading">
+        <h1>Create New ToDo</h1>
+      </div>
+      <div class="form-box">
+        <form [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+          <div>
+            <label for="name" id="name">Name:</label> <br />
+            <input type="text" id="name" formControlName="name" />
+          </div>
+
+          <div>
+            <label for="desc" id="desc">Description:</label> <br />
+            <input type="text" id="desc" formControlName="desc" />
+          </div>
+
+          <div>
+            <label for="category">Category: </label><br />
+            <input type="text" id="category" formControlName="category" />
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="!newTaskForm.valid"
+            class="new-task-send"
+          >
+            SEND
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
