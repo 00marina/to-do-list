@@ -13,6 +13,9 @@ import { CategoryEditComponent } from './category-edit/category-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NavComponent } from './nav/nav.component';
+import { FinishedTasksComponent } from './finished-tasks/finished-tasks.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     EditTodoComponent,
     CategoryViewComponent,
     CategoryNewComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    NavComponent,
+    FinishedTasksComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule
 
   ],
   providers: [],

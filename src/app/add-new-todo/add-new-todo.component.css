@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
-
+button {
+    cursor: pointer;
+}
 .new-todo-box {
-    background-color: #CAF0F8;
-    width: 100%;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +23,7 @@
     background-color: #0077B6;
     border-radius: 10px 10px 0 0;
     padding: 1vw 0;
-    color: aliceblue;
+    color: white;
     padding-left: 1vw;
 }
 
@@ -59,7 +60,7 @@ input:focus {
     border: none;
     border-radius: 10px;
     background-color: #0096C7;
-    color: aliceblue;
+    color: white;
     font-size: 1.2vw;
     text-align: center;
 }

@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { TodoServiceService } from '../todo-service.service';
-import { Area } from '../area';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTag } from '@fortawesome/free-solid-svg-icons';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Area } from '../area';
+import { TodoServiceService } from '../todo-service.service';
 
 @Component({
-  selector: 'app-todo-view',
-  templateUrl: './todo-view.component.html',
-  styleUrl: './todo-view.component.css',
+  selector: 'app-finished-tasks',
+  templateUrl: './finished-tasks.component.html',
+  styleUrl: './finished-tasks.component.css'
 })
-export class TodoViewComponent implements OnInit {
+export class FinishedTasksComponent {
   faTag = faTag;
   faPenToSquare = faPenToSquare;
   faTrash = faTrash;
@@ -20,8 +21,7 @@ export class TodoViewComponent implements OnInit {
   allTasksArray: Area[] = [];
   categoriesArray: string[] = [];
 
-  constructor(private service: TodoServiceService) {}
-
+  constructor(private service: TodoServiceService, public dialog: MatDialog) {}
   ngOnInit() {
     this.service.getDemoArray().subscribe((data: any) => {
       this.allTasksArray = data;
@@ -38,14 +38,6 @@ export class TodoViewComponent implements OnInit {
     this.allTasksArray = this.allTasksArray.filter(item => item.id !== id);
   }
 
-  //finish task
-  finishTask(id: number) {
-    let finTask = this.allTasksArray.find(item => item.id === id);
-    if (finTask !== undefined) {
-      finTask.done = true;
-    }
-  }
-
   undoFinish(id: number) {
     let finTask = this.allTasksArray.find(item => item.id === id);
     if (finTask !== undefined) {
@@ -54,4 +46,3 @@ export class TodoViewComponent implements OnInit {
   }
 
 }
-

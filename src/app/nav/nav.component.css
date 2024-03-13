@@ -1,0 +1,29 @@
+.nav-box {
+    border-right: 1px solid #0077B6;
+    height: 48vw;
+    width: 15vw;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2vw;
+}
+
+.nav p {
+    padding: 0 1vw;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav p:hover {
+    color: #0077B6;
+}
+.nav span {
+    width: 98%;
+    border: 1px solid #0077B6;
+}
+/* .nav p {
+    border-bottom: 1px solid #0077B6;
+} */

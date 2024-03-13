@@ -17,11 +17,12 @@
 .new-btn-box{
     width: 100%;
     cursor: pointer;
+
 }
 #add-new-todo {
     position: relative;
     top: 1vw;
-    left: 83.5vw;
+    left: 1.5vw;
     width: 10vw;
     height: 3vw;
     border: none;
@@ -40,6 +41,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* all tasks box */
@@ -173,7 +177,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: aliceblue;
     font-size: 1.4vw;
     border: none;
     border-radius: 10px;
@@ -194,7 +198,8 @@ button {
 
 /* finished tasks */
 .finished-tasks-disp {
-    width: 100%;
+    /* width: 100%; */
+    margin-top: 3vw;
 }
 
 .fin-tasks-box {

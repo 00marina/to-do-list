@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+button {
+    cursor: pointer;
+}
+.new-todo-box {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.todo-card {
+    border: 1px solid #0077B6;
+    border-radius: 10px;
+    width: 48vw;
+    background-color: aliceblue;
+    height: 39vw;
+}
+
+.new-todo-heading {
+    background-color: #0077B6;
+    border-radius: 10px 10px 0 0;
+    padding: 1vw 0;
+    color: white;
+    padding-left: 1vw;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 32.5vw;
+    gap: 3vw;
+    color: #0077B6;
+}
+
+input {
+    width: 20vw;
+    height: 2vw;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #0077B6;
+    font-size: 1.2vw;
+    color: #ba1a1a;
+    padding-left: 0.5vw;
+}
+
+input:focus {
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ba1a1a;
+}
+
+.new-task-send {
+    width: 7vw;
+    height: 2vw;
+    border: none;
+    border-radius: 10px;
+    background-color: #0096C7;
+    color: aliceblue;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* other styles */
+h1, h2, h3, h4, p {
+    display: block;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+    
+}
+
+h1 {
+ font-size: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+
+}
+
+h4 {
+    font-size: 1.3vw;
+}
+
+h5 {
+
+}
+
+p,
+fa-icon {
+    font-size: 1vw;
+}
+
+::-webkit-scrollbar {
+    width: 0.5vw; 
+    height: 2vw; 
+  }
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #0077B6; /* color of the scrollbar thumb */
+    border-radius: 6px; /* roundness of the thumb */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* color of the scrollbar track */
+  }
+  
+  /* Corner */
+  ::-webkit-scrollbar-corner {
+    background-color: transparent; /* color of the scrollbar corner */
+  }
